@@ -1,0 +1,23 @@
+<form [formGroup]="mascotaForm" (ngSubmit)="guardarMascota()">
+  <!-- Campos del formulario -->
+  <label for="nombres">Nombres:</label>
+  <input type="text" id="nombres" formControlName="nombres" required>
+
+  <label for="duena">Dueña:</label>
+  <input type="text" id="duena" formControlName="duena" required>
+
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" formControlName="edad" required>
+
+  <label for="direccion">Dirección:</label>
+  <input type="text" id="direccion" formControlName="direccion">
+
+  <label for="correo">Correo:</label>
+  <input type="email" id="correo" formControlName="correo" required>
+
+  <label for="celular">Celular:</label>
+  <input type="text" id="celular" formControlName="celular" pattern="[0-9]{10}">
+
+  <!-- Botón para agregar mascota -->
+  <button type="submit" [disabled]="mascotaForm.invalid">Agregar Mascota</button>
+</form>

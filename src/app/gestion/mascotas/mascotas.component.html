@@ -1,0 +1,44 @@
+<div class="container mt-3">
+  <h2>Mascotas</h2>
+  <div class="container mt-3">
+    <h2>Mascotas</h2>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-primary" (click)="irAFormulario()">Nueva Mascota</button>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Dueña</th>
+      <th>Edad Mascota</th>
+      <th>Dirección</th>
+      <th>Peso</th>
+      <th>Celular de la Dueña</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>0</td>
+      <td>Rambo</td>
+      <td>Diana Lizana</td>
+      <td>2</td>
+      <td>AAHH San Franciso de Asis Mz D Lte 10</td>
+      <td>anaidlizana8@gmail.com</td>
+      <td>905489658</td>
+    </tr>
+    <tr *ngFor="let registro of listaMascotas">
+      <td>{{registro.id}}</td>
+      <td>{{registro.nombres}}</td>
+      <td>{{registro.duena}}</td>
+      <td>{{registro.edad}}</td>
+      <td>{{registro.direccion}}</td>
+      <td>{{registro.correo}}</td>
+      <td>{{registro.celular}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
